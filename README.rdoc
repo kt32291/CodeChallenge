@@ -1,4 +1,4 @@
-README
+==NOTES
 
 When I received the challenge, I started by making a list of all the things a user needed to be able to do when they got to the site
 
@@ -9,12 +9,13 @@ ability to  (customer side)
 * be aware if there are errors with purchase
 * receive purchase confirmation on successful purchase
 
-    (admin side)
+(admin side)
 * add product to list
 * see all orders for each individual product
 * view list of all orders
 
-Then I modeled out the database and the model associates
+
+Then I modeled out the database and the model associations
 
 (sketch)
 
@@ -52,8 +53,11 @@ I then did a couple sketches of the first page the customer will see (product in
 
 Then I moved on to the validations. Obviously, the order would require all the params, so I validated presence of all the params. Since we weren’t doing credit card processing, but still needed the numbers, I validated the numerically of the cc number, and made sure it was an integer (no decimals). I also validated the length, since all cc’s are between 13-16 numbers.
 
-I validated that the email was a valid email address, and that the expiration date was later than today. I also set up the form so the date select only takes months and years, since cc dates only contain months and years.
+I validated that the email was a valid email address. I also set up the form so the date select only takes months and years, since cc dates only contain months and years.
 
 Then I styled and sketched the new product page. The only validations I set up there were the presence of all params and that the price was a number. I set up the uploader for the picture as well, and connected it to an AWS S3 bucket.
 
+I finished all the styling and I also set up a mailer for order confirmations, as it is one of my biggest pet peeves to not get an order confirmation when I pay for something online.
+
+I also added some design touches including taking the color from the LaunchPad Lab logo and using it as an accent color, and using a font similar to the logo font for the header :-)
 
