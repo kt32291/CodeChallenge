@@ -15,9 +15,22 @@ ability to  (customer side)
 * view list of all orders
 
 
-Then I modeled out the database and the model associations
+Then I modeled out the database and the model associations.
+product (has_many: orders)
+* title:string
+* price:decimal
+* pic:string
+* description:text
 
-(sketch)
+order (belongs_to: product)
+* email:string
+* first_name:string
+* last_name:string
+* credit_card:string
+* expiration:date
+* product_id:integer
+
+
 
 Walking through the user story of purchasing product, I listed the information that needed to be on each page:
 
@@ -38,7 +51,9 @@ new order
 * form for order: (first and last name, email address, credit card, expiration)
 * make purchase button
 
+
 Then I walked through the user story of adding a product and viewing orders
+
 
 new product
 * form for product: (title, price, description, pic)
