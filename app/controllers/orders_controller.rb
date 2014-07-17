@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.all
+    @orders = Order.all.order(:created_at).reverse
   end
 
   def new

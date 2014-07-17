@@ -17,7 +17,8 @@
 
 
 $(function() {
-  $('.reveal_orders').click(function() {
-    $('.product_orders .table').slideToggle();
+  $('p.reveal_orders').click(function() {
+    $('div.product_orders .table').slideToggle();
+    $('i.fa.fa-chevron-down').toggleClass('.fa.fa-chevron-up');
   });
 });

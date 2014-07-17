@@ -2,17 +2,19 @@
   <p class="bg-success notice"><%= notice %></p>
 <% end %>
 <div class="products_container">
-  <div class="col-md-5">
+  <div class="col-md-4">
     <%= image_tag @product.pic.url %>
   </div>
-  <div class="col-md-7">
+  <div class="col-md-8">
     <h2><%= @product.title %></h2>
     <p><%= @product.description %></p>
     <h2><%= number_to_currency(@product.price) %></h2>
     <%= link_to "Purchase #{@product.title}", "/orders/new/#{@product.id}", :class => "btn btn-primary" %>
   </div>
   <div class="col-md-12 clearfix"></div>
-  <button class="btn btn-default reveal_orders">See <%= @product.title %> Orders</button>
+  <% if @product.orders.count > 0 %>
+    <p class="reveal_orders">See Orders for <%= @product.title %> <i class="fa fa-chevron-down"></i></p>
+  <% end %>
   <div class="product_orders">
     <%= render template: 'orders/index' %>
   </div>

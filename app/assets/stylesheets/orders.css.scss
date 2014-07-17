@@ -2,10 +2,65 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$launchpad_logo_blue: rgb(0, 171, 220);
+$launchpad_logo_dark: darken($launchpad_logo_blue, 15%);
+
 table {
   margin-top: 30px;
   tr {
     td {
+    }
+  }
+}
+
+.order_review {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 10px 0px;
+  h2 {
+    font-size: 14pt;
+    span {
+      font-weight: lighter;
+    }
+  }
+  img {
+    width: 100px;
+  }
+  .price {
+    float: right;
+    vertical-align: bottom;
+    color: $launchpad_logo_blue;
+    font-weight: bold;
+  }
+}
+
+.form {
+  padding-top: 20px;
+  form {
+    input {
+      margin-bottom: 10px;
+    }
+    input[type='submit'] {
+      float: right;
+    }
+  }
+  ul {
+    color: red;
+  }
+}
+
+.side {
+  h2 {
+    text-align: right;
+
+  }
+  ul {
+    list-style-type: none;
+    text-align: right;
+    li {
+      color: red;
     }
   }
 }

@@ -15,6 +15,13 @@ body {
   height: 100%;
 }
 
+.btn-primary {
+  background: $launchpad_logo_blue;
+  &:hover {
+    background: $launchpad_logo_dark;
+  }
+}
+
 .container {
   background: white;
   border-left: 1px solid lightgray;
@@ -31,15 +38,30 @@ body {
   }
 }
 
-.products_container {
+.product_container, .order_container {
   padding: 15px;
   div {
     img {
       width: 100%;
     }
   }
-  button {
-    text-align: left;
+}
+
+.products_container {
+  img {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid lightgray;
+  }
+  p.reveal_orders {
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    color: $launchpad_logo_blue;
+    &:hover {
+      color: $launchpad_logo_dark;
+      text-decoration: underline;
+    }
   }
   .product_orders {
     h2 {
@@ -117,48 +139,4 @@ div.no_padding {
   }
 }
 
-.order_review {
-  margin-top: 50px;
-  margin-bottom: 30px;
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
-  padding: 10px 0px;
-  h2 {
-    font-size: 14pt;
-  }
-  img {
-    width: 100px;
-  }
-  .price {
-    float: right;
-    vertical-align: bottom;
-  }
-}
 
-.form {
-  padding-top: 20px;
-  form {
-    input {
-      margin-bottom: 10px;
-    }
-    input[type='submit'] {
-      float: right;
-    }
-  }
-  ul {
-    color: red;
-  }
-}
-
-.side {
-  h2 {
-    text-align: right;
-  }
-  ul {
-    list-style-type: none;
-    text-align: right;
-    li {
-      color: red;
-    }
-  }
-}

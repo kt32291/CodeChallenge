@@ -1,28 +1,60 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+When I received the challenge, I started by making a list of all the things a user needed to be able to do when they got to the site
 
-Things you may want to cover:
+ability to  (customer side)
+    -see list of all available items
+    -view each individual product
+    -purchase item
+    -be aware if there are errors with purchase
+    -receive purchase confirmation on successful purchase
 
-* Ruby version
+    (admin side)
+    -add product to list
+    -see all orders for each individual product
+    -view list of all orders
 
-* System dependencies
+Then I modeled out the database and the model associates
 
-* Configuration
+(sketch)
 
-* Database creation
+Walking through the user story of purchasing product, I listed the information that needed to be on each page:
 
-* Database initialization
+products index (home)
+  name and purpose of app
+  each product: (picture, price, title, link to show page)
 
-* How to run the test suite
+product show
+  title
+  picture
+  price
+  description
+  purchase button
+  link to orders for product
 
-* Services (job queues, cache servers, search engines, etc.)
+new order
+  product being purchased: (picture, price, title)
+  form for order: (first and last name, email address, credit card, expiration)
+  make purchase button
 
-* Deployment instructions
+Then I walked through the user story of adding a product and viewing orders
 
-* ...
+new product
+  form for product: (title, price, description, pic)
+  add product button
 
+order index
+  each order: (order placed, name of purchaser, email, product title, product price, customer card and expiration)
+
+Then I set up the database and associations in the app. Then I moved on to making sure of all the necessary information (outlined above) was on each page.
+
+I then did a couple sketches of the first page the customer will see (product index). I chose the most straightforward sketch, a centered title and tagline with small product cards. Then I applied that styling to the index page. I repeated that process for the show page, and the new order page. I didn’t want there to be a new order page unrelated to a product, so I set up the routes so the only order/new pages had a /:product_id at the end.
+
+Then I moved on to the validations. Obviously, the order would require all the params, so I validated presence of all the params. Since we weren’t doing credit card processing, but still needed the numbers, I validated the numerically of the cc number, and made sure it was an integer (no decimals). I also validated the length, since all cc’s are between 13-16 numbers.
+
+I validated that the email was a valid email address, and that the expiration date was later than today. I also set up the form so the date select only takes months and years, since cc dates only contain months and years.
+
+Then I styled and sketched the new product page. The only validations I set up there were the presence of all params and that the price was a number. I set up the uploader for the picture as well, and connected it to an AWS S3 bucket.
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
