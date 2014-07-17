@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(function() {
+  $('.reveal_orders').click(function() {
+    $('.product_orders .table').slideToggle();
+  });
+});

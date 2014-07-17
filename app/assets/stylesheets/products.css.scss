@@ -38,6 +38,17 @@ body {
       width: 100%;
     }
   }
+  button {
+    text-align: left;
+  }
+  .product_orders {
+    h2 {
+      display: none;
+    }
+    table {
+      display: none;
+    }
+  }
 }
 
 .notice {

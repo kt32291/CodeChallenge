@@ -8,7 +8,12 @@
   <div class="col-md-7">
     <h2><%= @product.title %></h2>
     <p><%= @product.description %></p>
-    <h3><%= @product.price %></h3>
-    <%= link_to "Purchase #{@product.title}", "/orders/new/#{@product.id}", :class => "btn btn-default" %>
+    <h2><%= number_to_currency(@product.price) %></h2>
+    <%= link_to "Purchase #{@product.title}", "/orders/new/#{@product.id}", :class => "btn btn-primary" %>
+  </div>
+  <div class="col-md-12 clearfix"></div>
+  <button class="btn btn-default reveal_orders">See <%= @product.title %> Orders</button>
+  <div class="product_orders">
+    <%= render template: 'orders/index' %>
   </div>
 </div>
