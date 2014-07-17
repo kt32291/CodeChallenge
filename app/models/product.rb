@@ -7,8 +7,4 @@ class Product < ActiveRecord::Base
 
   mount_uploader :pic, PicUploader
 
-  def formatted_price
-
-  end
-
 end

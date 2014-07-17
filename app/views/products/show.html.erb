@@ -12,9 +12,10 @@
     <%= link_to "Purchase #{@product.title}", "/orders/new/#{@product.id}", :class => "btn btn-primary" %>
   </div>
   <div class="col-md-12 clearfix"></div>
+    <p class="delete"><%= link_to "Delete #{@product.title}", @product, method: :delete, :class => "text-danger" %></p>
     <p class="edit"><%= link_to "Edit #{@product.title} Info", edit_product_path %><br /></p>
   <% if @product.orders.count > 0 %>
-    <p class="reveal_orders">See Orders for <%= @product.title %> <i class="fa fa-chevron-down"></i></p>
+    <p class="reveal_orders">Orders for <%= @product.title %> <i class="fa fa-chevron-down"></i></p>
   <% end %>
   <div class="product_orders">
     <%= render template: 'orders/index' %>

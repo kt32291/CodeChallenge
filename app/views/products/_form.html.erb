@@ -10,7 +10,7 @@
         <%= f.text_field :title, :class => "form-control" %>
 
         <%= f.label :price %>
-        <%= f.number_field :price, :class => "form-control" %>
+        <%= f.number_field :price, :class => "form-control", :step => 0.01 %>
 
         <%= f.label :pic %>
         <%= f.file_field :pic %>

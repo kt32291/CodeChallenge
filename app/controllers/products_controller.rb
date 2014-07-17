@@ -36,7 +36,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to products_url
+    redirect_to products_url, :notice => "Product successfully deleted"
   end
 
   private

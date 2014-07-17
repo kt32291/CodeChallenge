@@ -7,4 +7,9 @@ class Order < ActiveRecord::Base
   validates :credit_card, length: { in: 13..16 }, numericality: { only_integer: true }
   validates_associated :product
 
+  def extra_digits
+    extra_digits = self.credit_card.length - 4
+    return "*" * extra_digits
+  end
+
 end

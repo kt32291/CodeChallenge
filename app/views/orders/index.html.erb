@@ -18,8 +18,7 @@
         <td><%= order.first_name %> <%= order.last_name %> (<%= mail_to(order.email) %>)</td>
         <td><%= order.product.title %></td>
         <td><%= number_to_currency(order.product.price) %></td>
-        <% extra_digits = order.credit_card.length - 4 %>
-        <td><%= "*" * extra_digits %><%= order.credit_card.last(4) %></td>
+        <td><%= order.extra_digits %><%= order.credit_card.last(4) %></td>
         <td><%= order.expiration.strftime("%m/%y") %></td>
       </tr>
     <% end %>

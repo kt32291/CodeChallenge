@@ -12,13 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 
 $(function() {
   $('p.reveal_orders').click(function() {
     $('div.product_orders .table').slideToggle();
-    $('i.fa.fa-chevron-down').toggleClass('.fa.fa-chevron-up');
   });
 });
