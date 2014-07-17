@@ -21,6 +21,30 @@ body {
   border-right: 1px solid lightgray;
   height: inherit;
   max-width: 960px;
+  padding: 0px;
+  .nav {
+    margin-bottom: 20px;
+    text-align: center;
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.products_container {
+  padding: 15px;
+  div {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.notice {
+  text-align: center;
+  padding: 10px 0px;
+  margin: 0px;
+  font-weight: bold;
 }
 
 h1, h3 {
@@ -42,7 +66,6 @@ h1 {
 
 h3 {
   font-weight: lighter;
-  padding-bottom: 20px;
   a {
     font-weight: normal;
     color: $launchpad_logo_blue;

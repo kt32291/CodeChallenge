@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to @product
+      redirect_to @product, :notice => "Product successfully added"
     else
       render action: 'new'
     end
@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to @product
+      redirect_to @product, :notice => "Product successfully updated"
     else
       render action: 'edit'
     end

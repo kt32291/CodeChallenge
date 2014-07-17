@@ -1,13 +1,18 @@
-<% @products.each do |product| %>
-<a href="/products/<%= product.id %>">
-<div class="col-md-3 col-sm-4 col-xs-6">
-  <div class="thumbnail">
-    <%= image_tag product.pic.thumb.url %>
-    <div class="caption">
-      <p><%= number_to_currency(product.price) %></p>
-      <p><%= product.title %></p>
+<% if notice != nil %>
+  <p class="bg-success notice"><%= notice %></p>
+<% end %>
+<div class="products_container">
+  <% @products.each do |product| %>
+  <a href="/products/<%= product.id %>">
+  <div class="col-md-3 col-sm-4 col-xs-6">
+    <div class="thumbnail">
+      <%= image_tag product.pic.thumb.url %>
+      <div class="caption">
+        <p><%= number_to_currency(product.price) %></p>
+        <p><%= product.title %></p>
+      </div>
     </div>
   </div>
+  </a>
+  <% end %>
 </div>
-</a>
-<% end %>

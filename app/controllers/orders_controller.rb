@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     if @order.save
       OrderMailer.order_email(@order).deliver
-      redirect_to product_path(@order.product)
+      redirect_to products_path, :notice => "Thanks for your order! A confirmation email was sent to #{@order.email}."
     else
       @first_name = params[:first_name]
       redirect_to new_order_path(@order.product), :notice => @order.errors.full_messages

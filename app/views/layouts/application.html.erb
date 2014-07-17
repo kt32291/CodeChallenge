@@ -14,7 +14,12 @@
 <div class="container">
   <h1><%= link_to "LaunchPad Garage Sale", root_url %></h1>
   <h3><%= link_to "LaunchPad Lab", "http://launchpadlab.com/" %> is moving: buy their leftover shit for cheap!</h3>
+  <ul class="nav">
+    <li><%= link_to "List New Product", new_product_path, :class => "btn btn-default" %></li>
+    <li><%= link_to "Active Orders", orders_path, :class => "btn btn-default" %></li>
+  </ul>
   <%= yield %>
+
 </div>
 
 </body>
