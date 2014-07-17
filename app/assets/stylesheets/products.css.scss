@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  background: url('white_wall.png');
-  height: inherit;
+  background: url('grey.png');
+  height: 100%;
 }
 
 .container {
@@ -57,6 +57,7 @@ h3 {
   img {
     width: 100%;
     opacity: 0.95;
+    border: 1px solid lightgray;
   }
   p {
     margin-bottom: 0px;
@@ -118,5 +119,12 @@ div.no_padding {
 .side {
   h2 {
     text-align: right;
+  }
+  ul {
+    list-style-type: none;
+    text-align: right;
+    li {
+      color: red;
+    }
   }
 }

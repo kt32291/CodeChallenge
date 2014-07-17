@@ -1,6 +1,6 @@
 <div class="show_container">
   <h2><%= @product.title %></h2>
-  <%= image_tag @product.pic %>
+  <%= image_tag @product.pic.url %>
   <h3><%= @product.price %></h3>
   <p><%= @product.description %></p>
   <%= link_to "Purchase #{@product.title}", "/orders/new/#{@product.id}", :class => "btn btn-default" %>

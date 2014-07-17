@@ -2,7 +2,7 @@
 <a href="/products/<%= product.id %>">
 <div class="col-md-3 col-sm-4 col-xs-6">
   <div class="thumbnail">
-    <%= image_tag product.pic.url %>
+    <%= image_tag product.pic.thumb.url %>
     <div class="caption">
       <p><%= number_to_currency(product.price) %></p>
       <p><%= product.title %></p>

@@ -15,9 +15,7 @@ class OrdersController < ApplicationController
     if @order.save
       redirect_to product_path(@order.product)
     else
-      @first_name = @order.first_name
-      @last_name = @order.last_name
-      @email = @order.email
+      @first_name = params[:first_name]
       redirect_to new_order_path(@order.product), :notice => @order.errors.full_messages
     end
   end

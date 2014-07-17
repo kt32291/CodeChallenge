@@ -1,6 +1,6 @@
 <div class="col-md-12 order_review">
   <div class="col-md-2">
-    <%= image_tag @product.pic %>
+    <%= image_tag @product.pic.thumb.url %>
   </div>
   <div class="col-md-10">
     <div class="col-md-12">
@@ -10,20 +10,19 @@
   </div>
 </div>
 <div class="checkout_area">
-  <div class="col-md-2"></div>
-  <div class="col-md-3 side">
+  <div class="col-md-5 side">
     <h2>Checkout <i class="fa fa-arrow-circle-o-right"></i></h2>
+    <% @errors = notice %>
+    <% if @errors != nil %>
+      <ul>
+        <% @errors.each do |error| %>
+        <li><%= error %></li>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
   <div class="col-md-7 form">
     <%= form_for(@order) do |f| %>
-      <% @errors = notice %>
-      <% if @errors != nil %>
-        <ul>
-          <% @errors.each do |error| %>
-          <li><%= error %></li>
-          <% end %>
-        </ul>
-      <% end %>
       <div class="col-md-6 no_padding first">
         <%= f.label :first_name %>
         <%= f.text_field :first_name, :class => "form-control" %>

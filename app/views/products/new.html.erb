@@ -1,7 +1,7 @@
 <div class="form">
-    <div class="col-md-4"></div>
+    <div class="col-md-5 side">
+      <h2>List New Product <i class="fa fa-arrow-circle-o-right"></i></h2>
       <%= form_for(@product) do |f| %>
-      <div class="col-md-8">
         <% if @product.errors.any? %>
           <ul>
           <% @product.errors.full_messages.each do |message| %>
@@ -10,8 +10,7 @@
           </ul>
         <% end %>
       </div>
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
+      <div class="col-md-3 form">
         <%= f.label :title %>
         <%= f.text_field :title, :class => "form-control" %>
 
@@ -21,7 +20,7 @@
         <%= f.label :pic %>
         <%= f.file_field :pic %>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 form">
         <%= f.label :description %>
         <%= f.text_area :description, :class => "form-control", :rows => 5 %>
 
