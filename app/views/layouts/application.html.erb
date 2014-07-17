@@ -4,7 +4,7 @@
   <title>LaunchPad Lab Garage Sale</title>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,10 +13,10 @@
 
 <div class="container">
   <h1><%= link_to "LaunchPad Garage Sale", root_url %></h1>
-  <h3><%= link_to "LaunchPad Lab", "http://launchpadlab.com/" %> is moving: buy their leftover furniture at great prices.</h3>
+  <h3><%= link_to "LaunchPad Lab", "http://launchpadlab.com/" %> is getting a sweet new office: buy their leftover furniture at great prices.</h3>
   <ul class="nav">
-    <li><%= link_to "List New Product", new_product_path, :class => "btn btn-default" %></li>
-    <li><%= link_to "Active Orders", orders_path, :class => "btn btn-default" %></li>
+    <li><%= link_to '<i class="fa fa-pencil"></i> List New Product'.html_safe, new_product_path, :class => "btn btn-default" %></li>
+    <li><%= link_to '<i class="fa fa-list-ol"></i> Active Orders'.html_safe, orders_path, :class => "btn btn-default" %></li>
   </ul>
   <%= yield %>
 

@@ -3,16 +3,16 @@
 When I received the challenge, I started by making a list of all the things a user needed to be able to do when they got to the site
 
 ability to  (customer side)
-    -see list of all available items
-    -view each individual product
-    -purchase item
-    -be aware if there are errors with purchase
-    -receive purchase confirmation on successful purchase
+    *see list of all available items
+    *view each individual product
+    *purchase item
+    *be aware if there are errors with purchase
+    *receive purchase confirmation on successful purchase
 
     (admin side)
-    -add product to list
-    -see all orders for each individual product
-    -view list of all orders
+    *add product to list
+    *see all orders for each individual product
+    *view list of all orders
 
 Then I modeled out the database and the model associates
 

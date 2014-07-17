@@ -22,11 +22,18 @@ body {
   }
 }
 
+a {
+  color: $launchpad_logo_blue;
+  &:hover {
+    color: $launchpad_logo_dark;
+  }
+}
+
 .container {
+  height: 100%;
   background: white;
   border-left: 1px solid lightgray;
   border-right: 1px solid lightgray;
-  height: inherit;
   max-width: 960px;
   padding: 0px;
   .nav {
@@ -53,7 +60,7 @@ body {
     margin-top: 20px;
     border: 1px solid lightgray;
   }
-  p.reveal_orders {
+  p.reveal_orders, p.edit {
     float: right;
     margin-right: 15px;
     cursor: pointer;
@@ -85,9 +92,10 @@ h1, h3 {
 }
 
 h1 {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bolder;
   font-size: 50pt;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   a {
     color: inherit;
     &:hover {
@@ -98,6 +106,7 @@ h1 {
 }
 
 h3 {
+  padding-top: 0px;
   font-weight: lighter;
   a {
     font-weight: normal;
@@ -137,6 +146,11 @@ div.no_padding {
   &.first {
     padding-right: 15px;
   }
+}
+
+.fix {
+  content: " ";
+  height: 5px;
 }
 
 

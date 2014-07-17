@@ -14,7 +14,7 @@ table {
 }
 
 .order_review {
-  margin-top: 50px;
+  margin-top: 15px;
   margin-bottom: 30px;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
@@ -36,31 +36,25 @@ table {
   }
 }
 
+
+
 .form {
   padding-top: 20px;
+  h2 {
+    margin-top: 0px;
+  }
   form {
     input {
       margin-bottom: 10px;
     }
     input[type='submit'] {
       float: right;
+      margin-top: 15px;
     }
   }
   ul {
     color: red;
+    text-align: left;
   }
 }
 
-.side {
-  h2 {
-    text-align: right;
-
-  }
-  ul {
-    list-style-type: none;
-    text-align: right;
-    li {
-      color: red;
-    }
-  }
-}

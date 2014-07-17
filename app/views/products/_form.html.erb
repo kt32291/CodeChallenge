@@ -1,0 +1,22 @@
+      <%= form_for(@product) do |f| %>
+        <% if @product.errors.any? %>
+          <ul>
+          <% @product.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        <% end %>
+        <%= f.label :title %>
+        <%= f.text_field :title, :class => "form-control" %>
+
+        <%= f.label :price %>
+        <%= f.number_field :price, :class => "form-control" %>
+
+        <%= f.label :pic %>
+        <%= f.file_field :pic %>
+        <%= f.label :description %>
+        <%= f.text_area :description, :class => "form-control", :rows => 5 %>
+
+        <%= f.submit 'Add Product', :class => "btn btn-primary" %>
+      <% end %>
+      <div class="fix"></div>
