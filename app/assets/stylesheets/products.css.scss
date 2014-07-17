@@ -1,0 +1,122 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$launchpad_logo_blue: rgb(0, 171, 220);
+$launchpad_logo_dark: darken($launchpad_logo_blue, 15%);
+
+html {
+  height: 100%;
+}
+
+body {
+  background: url('white_wall.png');
+  height: inherit;
+}
+
+.container {
+  background: white;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  height: inherit;
+  max-width: 960px;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 50pt;
+  padding-bottom: 10px;
+  a {
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+h3 {
+  font-weight: lighter;
+  padding-bottom: 20px;
+  a {
+    font-weight: normal;
+    color: $launchpad_logo_blue;
+    &:hover {
+      color: $launchpad_logo_dark;
+    }
+  }
+}
+
+.thumbnail {
+  display: inline-block;
+  img {
+    width: 100%;
+    opacity: 0.95;
+  }
+  p {
+    margin-bottom: 0px;
+    &:nth-of-type(1) {
+    float: right;
+    }
+    &:nth-of-type(2) {
+      font-weight: bold;
+    }
+  }
+  &:hover {
+    border-color: gray;
+    img {
+      opacity: 1.0;
+    }
+  }
+}
+
+div.no_padding {
+  padding: 0px;
+  &.first {
+    padding-right: 15px;
+  }
+}
+
+.order_review {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 10px 0px;
+  h2 {
+    font-size: 14pt;
+  }
+  img {
+    width: 100px;
+  }
+  .price {
+    float: right;
+    vertical-align: bottom;
+  }
+}
+
+.form {
+  padding-top: 20px;
+  form {
+    input {
+      margin-bottom: 10px;
+    }
+    input[type='submit'] {
+      float: right;
+    }
+  }
+  ul {
+    color: red;
+  }
+}
+
+.side {
+  h2 {
+    text-align: right;
+  }
+}

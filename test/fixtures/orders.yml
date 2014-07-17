@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  credit_card: MyString
+  expiration: 2014-07-16
+  product_id: 1
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  credit_card: MyString
+  expiration: 2014-07-16
+  product_id: 1
