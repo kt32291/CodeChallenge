@@ -13,6 +13,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     if @order.save
+      OrderMailer.order_email(@order).deliver
       redirect_to product_path(@order.product)
     else
       @first_name = params[:first_name]
