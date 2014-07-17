@@ -1,8 +1,8 @@
 CarrierWave.configure do |config|
   config.fog_credentials = {
     :provider               => 'AWS',       # required
-    :aws_access_key_id      => ENV["AWS_ACCESS_KEY_ID"],       # required
-    :aws_secret_access_key  => ENV["AWS_SECRET_ACCESS_KEY"],
+    :aws_access_key_id      => 'AKIAIY5KNRPSHRMXVKMA',       # required
+    :aws_secret_access_key  => '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',
     :region                 => 'us-east-1'
   }
   config.fog_directory  = 'llchallenge-assets'
